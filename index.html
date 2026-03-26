@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Elite Footwear</title>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">ELITE FOOTWEAR</div>
+    </nav>
+
+    <div class="container">
+        <h1 class="main-title">ELITE NEW ARRIVALS</h1>
+
+        <div class="feed-container">
+            <div class="product-card" onclick="openProduct('NIKE SB DUNK WHITE', '290.000 DT', 'https://i.ibb.co/7JdL2ZJV/image.jpg')">
+                <img src="https://i.ibb.co/7JdL2ZJV/image.jpg" class="product-img">
+                <div class="product-details">
+                    <h3 class="product-name">NIKE SB DUNK WHITE</h3>
+                    <p class="price">290.000 DT</p>
+                    <button class="view-btn">VIEW DETAILS</button>
+                </div>
+            </div>
+
+            <div class="product-card" onclick="openProduct('ADIDAS SAMBA OG', '260.000 DT', 'https://i.ibb.co/6RS7pkzr/image.jpg')">
+                <img src="https://i.ibb.co/6RS7pkzr/image.jpg" class="product-img">
+                <div class="product-details">
+                    <h3 class="product-name">ADIDAS SAMBA OG</h3>
+                    <p class="price">260.000 DT</p>
+                    <button class="view-btn">VIEW DETAILS</button>
+                </div>
+            </div>
+            
+            </div>
+    </div>
+
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modalImg" src="" class="modal-img-big">
+            <h2 id="modalName"></h2>
+            <p id="modalPrice" class="modal-price"></p>
+            
+            <div class="options">
+                <label>Size:</label>
+                <select id="sizeSelect">
+                    <option>40</option><option>41</option><option>42</option><option>43</option><option>44</option>
+                </select>
+                <label style="margin-top:10px; display:block;">Color:</label>
+                <select id="colorSelect">
+                    <option>As Shown</option><option>Black</option><option>White</option>
+                </select>
+            </div>
+
+            <button class="wa-order-btn" onclick="sendWhatsApp()">
+                <i class="fab fa-whatsapp"></i> ORDER ON WHATSAPP
+            </button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>ELITE FOOTWEAR - TUNIS</p>
+        <p>Contact: +216 56 206 785</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
